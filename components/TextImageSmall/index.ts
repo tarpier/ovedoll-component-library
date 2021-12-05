@@ -1,0 +1,1 @@
+export { TextImageSmall } from './TextImageSmall'

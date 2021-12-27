@@ -7,7 +7,7 @@ interface IContactFormProps {
 
 export const ContactForm = ({ btnLabel = 'Hire me today', actionUrl }: IContactFormProps) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper className='pb-24' isWide>
       <div className="relative bg-white">
         <div className="absolute inset-0">
           <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50" />
@@ -21,14 +21,16 @@ export const ContactForm = ({ btnLabel = 'Hire me today', actionUrl }: IContactF
             </div>
             <div className="max-w-lg mx-auto mt-5">
               {/* <h2 className="text-2xl font-bold tracking-tight text-headline sm:text-3xl"> */}
-              <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl sm:leading-none lg:leading-tight pb-8">
+              <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl leading-relaxed pb-8">
                 Lets work together on your next frontend project
               </h2>
-              <p className="mt-3 text-lg leading-6 text-copy">
-                I'd love to work with you.
-              </p>
-              <p className="mt-3 text-lg leading-6 text-copy">
-                If you like to talk about your Next.js project or need advice on a digital product message me.</p>
+              <div className='prose'>
+                <p className="mt-3 text-xl text-copy">
+                  I'd love to work with you.
+                </p>
+                <p className="mt-3 text-xl text-copy">
+                  If you like to talk about your frontend project or need advice on a digital product message me.</p>
+              </div>
             </div>
           </div>
           <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">

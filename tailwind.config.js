@@ -11,8 +11,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        copy: '#777777',
-        headline: colors.gray[900],
+        copy: colors.gray[600],
+        headline: colors.gray[800],
         'accent-light': colors.teal[200],
         accent: colors.teal[400],
         'accent-dark': colors.teal[700],
@@ -23,5 +23,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [require('@tailwindcss/forms')]
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
 };

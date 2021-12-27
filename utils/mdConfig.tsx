@@ -1,5 +1,5 @@
 const h2 = (node) => (
-  <h2 className="font-sans text-3xl mb-4 font-bold tracking-tight text-headline sm:text-4xl sm:leading-none lg:leading-tight">
+  <h2 className="font-sans text-3xl mb-4 font-bold tracking-tight text-headline sm:text-4xl leading-relaxed">
     {node.children}
   </h2>)
 
@@ -10,7 +10,7 @@ const p = (node, ...props) => (
 )
 
 const li = (node, ...props) => (
-  <li className="ml-8 mb-2" {...props}>
+  <li className="font-sans text-copy" {...props}>
     {node.children}
   </li>
 )
@@ -21,10 +21,17 @@ const ul = (node, ...props) => (
   </ul>
 )
 
+const ol = (node, ...props) => (
+  <ol className="list-decimal">
+    {node.children}
+  </ol>
+)
+
 export const mdConfig = {
   h1: h2,
   h2,
   p,
+  ol,
   ul,
   li
 };

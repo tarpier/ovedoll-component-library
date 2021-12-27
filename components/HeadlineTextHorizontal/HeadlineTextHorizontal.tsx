@@ -11,9 +11,9 @@ interface IHeadlineTextHorizontalProps {
 
 export const HeadlineTextHorizontal = ({ headline1, headline2, headline3, copy }: IHeadlineTextHorizontalProps) => {
   return (
-    <ContentWrapper>
-      <div className="flex flex-col md:flex-row pb-24">
-        <div className="mb-6 lg:mb-0 md:w-1/2 xl:w-1/3 lg:pr-5">
+    <ContentWrapper className='pb-24' isWide>
+      <div className="flex flex-col md:flex-row">
+        <div className="mb-6 lg:mb-0 md:w-1/2 lg:pr-5">
           <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl sm:leading-none lg:leading-tight">
             <span className="inline-block text-accent">
               {headline1}
@@ -24,7 +24,7 @@ export const HeadlineTextHorizontal = ({ headline1, headline2, headline3, copy }
             {headline3}
           </h2>
         </div>
-        <div className="md:w-1/2 xl:w-2/3">
+        <div className="md:w-1/2 prose">
           <ReactMarkdown children={copy} components={mdConfig} />
         </div>
       </div>

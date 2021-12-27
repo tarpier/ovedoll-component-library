@@ -3,18 +3,33 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.5",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-markdown": "^7.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@storybook/addon-actions": "^6.5.0-alpha.1",
+    "@storybook/addon-essentials": "^6.5.0-alpha.1",
+    "@storybook/addon-links": "^6.5.0-alpha.1",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.5.0-alpha.1",
+    "@tailwindcss/forms": "^0.3.4",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.36",
     "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.3",
     "postcss": "^8.3.5",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^7.0.1",
+    "prettier": "^2.5.1",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.5.2"
   }

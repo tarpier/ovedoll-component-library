@@ -1,0 +1,1 @@
+export { HeadlineTextHorizontal } from './HeadlineTextHorizontal'

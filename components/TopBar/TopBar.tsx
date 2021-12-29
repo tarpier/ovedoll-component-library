@@ -12,7 +12,7 @@ interface ITopBarProps {
 
 export const TopBar = ({ navigation }: ITopBarProps) => {
   return (
-    <div className="border-b-4 border-solid border-accent w-screen pt-2 pb-4">
+    <div className="border-b-4 border-solid border-accent w-screen pt-2 pb-4 mb-20">
       <ContentWrapper isWide>
         <div className="flex justify-between">
           <div>

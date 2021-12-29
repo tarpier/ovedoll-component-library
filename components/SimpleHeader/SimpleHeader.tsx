@@ -3,7 +3,7 @@ import { ContentWrapper } from "../ContentWrapper"
 export const SimpleHeader = ({ dateLine, headline, paragraph }) => {
   return (
     <ContentWrapper>
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-5xl md:mb-12 py-24">
+      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-5xl md:mb-12 pb-24">
         <div>
           <p className="inline-block py-px mb-3 text-base md:text-lg font-regular tracking-widest md:tracking-wider uppercase text-accent">
             {dateLine}

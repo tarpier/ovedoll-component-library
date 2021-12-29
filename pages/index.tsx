@@ -35,7 +35,7 @@ export default function Home() {
         <HeadlineText
           dateLine='Services'
           headline={'How can I help your Project as a Freelance Frontend Developer'}
-          copy={`As senior Frontend Developer I have specialised in React as a framework and work a lot in the Jamstack context. This means building very fast static sites that are enhanced through serverless functions to deliver the best in class performance and flexibility.\n\n \n\n Common scenarios where I deliver successful projects:\n\n 1.  You are planning a new project and require technical advice on the frontend architecture.\n\n 2. Your team needs a freelance Frontend Developer to support and create deliverables.\n\n 3. Your design and UX is finished and you need a freelance Frontend Engineer to build the UI components or a full fledged UI / Design system.\n\n 4. You wish to integrate ecommerce capabilities to an existing site or start a new headless Shopify project.\n\n 5. Your website needs a content management system and you want to add a modern headless CMS.\n\n \n\n Does one or more cases sound familiar, do reach out and let us discuss how I can advice on your project.\n\n`}
+          copy={`As senior Frontend Developer I have specialised in React as a framework and work a lot in the Jamstack context. This means building very fast static sites that are enhanced through serverless functions to deliver the best in class performance and flexibility.\n\n \n\n Common scenarios where I deliver successful projects:\n\n 1.  You are planning a new project and require technical advice on the frontend architecture.\n\n 2. Your team needs a freelance Frontend Developer to support and create deliverables.\n\n 3. Your design and UX is finished and you need a freelance Frontend Engineer to build the UI components or a full fledged UI / Design system.\n\n 4. You wish to integrate ecommerce capabilities to an existing site or start a new headless Shopify project.\n\n 5. Your website needs a content management system and you want to add a modern headless CMS.\n\n \n\n Does one or more cases sound familiar, do reach out and let us discuss how I can help on your project.\n\n`}
         />
         {/* <HeadlineTextHorizontal
           headline1='Frontend Developer'
@@ -43,7 +43,7 @@ export default function Home() {
           headline3='Trainer'
           copy={'Hey I’m Ove, fullstack developer specialized in frontend development, based in Hamburg, Germany. I am especially interested in the JAMStack and the whole ecosystem around it. \n\n I help companies, brands and agencies build digital products. This could mean building a website to attract new clients, running a fast and SEO friendly online shop or developing a solution for your specific needs. \n\n I would love to help you or your clients achieve more.'}
         /> */}
-        <ContactForm actionUrl='/' />
+        <ContactForm />
       </main>
 
       <footer className="h-24 mt-10 w-full bg-gray-800">

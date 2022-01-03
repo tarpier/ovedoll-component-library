@@ -7,8 +7,23 @@ import { TopBar } from '../components/TopBar'
 import { HeadlineText } from '../components/HeadlineText'
 import { ContentWrapper } from '../components/ContentWrapper'
 import { MyPageSeo } from '../components/MyPageSeo'
+import { fetchAPI, fetchPageBySlug } from '../utils/api'
 
-export default function Home() {
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const [pageContent] = await Promise.all([
+    fetchPageBySlug('home'),
+  ]);
+  console.log('>', pageContent)
+
+  return {
+    props: { pageContent },
+    revalidate: 1,
+  };
+}
+
+export default function Home({ pageContent }) {
+  console.log('>>>', pageContent)
   return (
     <>
       <MyPageSeo

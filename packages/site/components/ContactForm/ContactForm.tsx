@@ -2,9 +2,12 @@ import { ContentWrapper } from '../ContentWrapper';
 import { useForm } from 'react-hook-form';
 import { postData } from '../../utils/postData';
 import { useRouter } from 'next/router';
-
-interface IContactFormProps {
-  btnLabel?: string;
+import ReactMarkdown from 'react-markdown';
+import { mdConfig } from '../../utils/mdConfig';
+export interface IContactFormProps {
+  headline: string
+  copy: string;
+  buttonLabel?: string;
 }
 
 type TFormData = {
@@ -14,11 +17,10 @@ type TFormData = {
   honeyPot: string;
 };
 
-export const ContactForm = ({ btnLabel = 'Hire me today' }: IContactFormProps) => {
+export const ContactForm = ({ headline, copy, buttonLabel = 'Hire me today' }: IContactFormProps) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors }
   } = useForm<TFormData>();
   const router = useRouter();
@@ -54,16 +56,11 @@ export const ContactForm = ({ btnLabel = 'Hire me today' }: IContactFormProps) =
               </svg>
             </div>
             <div className="max-w-lg mx-auto mt-5">
-              {/* <h2 className="text-2xl font-bold tracking-tight text-headline sm:text-3xl"> */}
               <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl leading-relaxed pb-8">
-                Lets work together on your next frontend project
+                {headline}
               </h2>
               <div className="prose">
-                <p className="mt-3 text-xl text-copy">I'd love to work with you.</p>
-                <p className="mt-3 text-xl text-copy">
-                  If you like to talk about your frontend project or need advice on a digital
-                  product message me.
-                </p>
+                <ReactMarkdown children={copy} components={mdConfig} />
               </div>
             </div>
           </div>
@@ -153,7 +150,7 @@ export const ContactForm = ({ btnLabel = 'Hire me today' }: IContactFormProps) =
                   <button
                     type="submit"
                     className="inline-flex items-center px-8 py-5 border border-transparent shadow-sm font-bold text-xl rounded-sm text-headline tracking-wider hover:copy bg-accent-light hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent ">
-                    Hire me today
+                    {buttonLabel}
                   </button>
                 </div>
               </form>

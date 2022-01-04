@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_component_contact_forms",
+  "info": {
+    "displayName": "ContactForm",
+    "icon": "mail-bulk"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "copy": {
+      "type": "richtext"
+    },
+    "buttonLabel": {
+      "type": "string"
+    }
+  }
+}

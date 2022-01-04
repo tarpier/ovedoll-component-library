@@ -1,6 +1,5 @@
 import NextHeadSeo from 'next-head-seo';
 
-// types
 export type TPageSeoProps = {
   path: string;
   title: string;
@@ -23,7 +22,7 @@ export const MyPageSeo: React.FC<TPageSeoProps> = (props) => {
   const APP_ROOT_URL = process.env.NEXT_PUBLIC_APP_ROOT_URL;
 
   // Absolute page url
-  const pageUrl = APP_ROOT_URL + path
+  const pageUrl = APP_ROOT_URL + '/' + path
   // Absolute og image url
   const ogImageUrl = APP_ROOT_URL + ogImagePath
 

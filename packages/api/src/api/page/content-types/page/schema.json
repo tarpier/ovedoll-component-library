@@ -27,15 +27,23 @@
     },
     "slug": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "content": {
       "type": "dynamiczone",
       "components": [
         "component.profile-text",
-        "component.copy"
+        "component.copy",
+        "component.contact-form"
       ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "noIndex": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

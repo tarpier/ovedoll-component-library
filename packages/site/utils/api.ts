@@ -10,9 +10,10 @@ export async function fetchAPI(path) {
   const requestUrl = getStrapiURL(path);
   const response = await fetch(requestUrl);
   const data = await response.json();
-  return data?.data[0];
+  return data;
 }
 
+// Get all page data for specific path and populate dynamic zones or component zones
 export async function fetchPageBySlug(slug) {
   const requestUrl = getStrapiURL(`/api/pages?filters[slug][$eq]=${slug}&populate=%2A`);
   const response = await fetch(requestUrl);

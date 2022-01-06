@@ -30,7 +30,7 @@ export const ProfileText = ({ imgSrc, imgAlt, buttonLabel, copy, dateLine }: IPr
             <img
               src={imgSrc}
               alt={imgAlt}
-              className={'absolute z-10 inset-0  rounded-sm'}
+              className={'absolute z-10 inset-0 rounded-sm'}
             />
           </div>
         </div>

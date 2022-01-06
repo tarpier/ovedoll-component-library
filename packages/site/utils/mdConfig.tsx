@@ -10,7 +10,7 @@ const p = (node, ...props) => (
 )
 
 const li = (node, ...props) => (
-  <li className="font-sans text-copy" {...props}>
+  <li className="font-sans text-copy text-xl" {...props}>
     {node.children}
   </li>
 )

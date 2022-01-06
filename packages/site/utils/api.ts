@@ -18,5 +18,5 @@ export async function fetchPageBySlug(slug) {
   const requestUrl = getStrapiURL(`/api/pages?filters[slug][$eq]=${slug}&populate=%2A`);
   const response = await fetch(requestUrl);
   const data = await response.json();
-  return data?.data[0];
+  return data?.data?.[0];
 }

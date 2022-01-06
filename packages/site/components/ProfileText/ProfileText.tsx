@@ -36,10 +36,10 @@ export const ProfileText = ({ imgSrc, imgAlt, buttonLabel, copy, dateLine }: IPr
         </div>
       </div>
       <div>
-        <button
+        <a href="#contact"
           className="inline-flex items-center px-8 py-5 border border-transparent shadow-sm font-bold text-xl rounded-sm text-headline tracking-wider hover:copy bg-accent-light hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent ">
           {buttonLabel}
-        </button>
+        </a>
       </div>
     </ContentWrapper>
   );

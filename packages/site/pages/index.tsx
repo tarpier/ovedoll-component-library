@@ -1,6 +1,7 @@
 import { ContentWrapper } from '../components/ContentWrapper'
 import { DynamicContent } from '../components/DynamicContent'
 import { MyPageSeo } from '../components/MyPageSeo'
+import { SimpleHeader } from '../components/SimpleHeader'
 import { TopBar } from '../components/TopBar'
 import { fetchPageBySlug } from '../utils/api'
 
@@ -24,6 +25,14 @@ export default function Index({ pageContent }) {
         description={description}
         noindex={noIndex || false}
       />
+      {
+        hero ? (
+          <SimpleHeader {...hero} />
+        ) : null
+      }
+      <header>
+
+      </header>
       <main className="">
         <DynamicContent components={content} />
       </main>

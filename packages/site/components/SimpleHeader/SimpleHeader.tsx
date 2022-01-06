@@ -1,6 +1,12 @@
 import { ContentWrapper } from "../ContentWrapper"
 
-export const SimpleHeader = ({ dateLine, headline, paragraph }) => {
+export interface ISimpleHeaderProps {
+  dateLine: string
+  headline: string
+  copy: string
+}
+
+export const SimpleHeader = ({ dateLine, headline, copy }: ISimpleHeaderProps) => {
   return (
     <ContentWrapper>
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-5xl md:mb-12 pb-24">
@@ -13,7 +19,7 @@ export const SimpleHeader = ({ dateLine, headline, paragraph }) => {
           {headline}
         </h1>
         <p className="text-lg text-copy md:text-xl md:max-w-2xl mx-auto">
-          {paragraph}
+          {copy}
         </p>
       </div>
     </ContentWrapper>

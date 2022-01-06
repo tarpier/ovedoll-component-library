@@ -56,7 +56,7 @@ export const ContactForm = ({ headline, copy, buttonLabel = 'Hire me today' }: I
               </svg>
             </div>
             <div className="max-w-lg mx-auto mt-5">
-              <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl leading-relaxed pb-8">
+              <h2 className="font-sans text-3xl font-bold tracking-tight text-headline sm:text-4xl leading-relaxed pb-8" id="contact">
                 {headline}
               </h2>
               <div className="prose">

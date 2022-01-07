@@ -7,14 +7,14 @@ import { IProfileTextProps } from "../ProfileText/ProfileText"
 
 export const DynamicContent = ({ components }) => {
 
-  return components.map((component) => {
+  return components.map((component, index) => {
     switch (component.__component) {
       case "component.profile-text":
-        return (<ProfileText {...component as IProfileTextProps} />)
+        return (<ProfileText key={`${component.__component}-${index}`} {...component as IProfileTextProps} />)
       case "component.copy":
-        return (<Copy {...component as ICopyProps} />)
+        return (<Copy key={`${component.__component}-${index}`} {...component as ICopyProps} />)
       case "component.contact-form":
-        return (<ContactForm {...component as IContactFormProps} />)
+        return (<ContactForm key={`${component.__component}-${index}`} {...component as IContactFormProps} />)
     }
   })
 

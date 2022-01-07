@@ -16,7 +16,6 @@ export async function fetchAPI(path) {
 // Get all page data for specific path and populate dynamic zones or component zones
 export async function fetchPageBySlug(slug) {
   const requestUrl = getStrapiURL(`/api/pages?filters[slug][$eq]=${slug}&populate=%2A`);
-  console.log(requestUrl)
 
   const response = await fetch(requestUrl);
   const data = await response.json();

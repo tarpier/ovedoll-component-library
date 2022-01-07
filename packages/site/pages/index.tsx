@@ -25,6 +25,7 @@ export default function Home({ pageContent }) {
         title={title}
         description={description}
         noindex={noIndex || false}
+        noTitleTemplate
       />
       {
         hero ? (

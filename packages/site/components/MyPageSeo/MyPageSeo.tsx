@@ -14,7 +14,7 @@ export const MyPageSeo: React.FC<TPageSeoProps> = (props) => {
     path,
     title = "default Title",
     description = "Default description",
-    ogImagePath = "/default-og.png",
+    ogImagePath = "/og-default.png",
     noindex,
     noTitleTemplate,
   } = props;
@@ -36,13 +36,13 @@ export const MyPageSeo: React.FC<TPageSeoProps> = (props) => {
         title,
         description,
         url: pageUrl,
-        // image: ogImageUrl,
+        image: ogImageUrl,
         // type: 'article',
         siteName: 'Freelance Frontend Developer Ove Doll',
       }}
-      // twitter={{
-      //   card: "summary_large_image",
-      // }}
+      twitter={{
+        card: "summary_large_image",
+      }}
       customLinkTags={[
         { rel: 'icon', href: '/favicon.ico' }
       ]}

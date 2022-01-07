@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'
 import { ContentWrapper } from '../components/ContentWrapper'
 import { TopBar } from '../components/TopBar'
 import '../styles/styles.css'
+import '../public/serviceworker.js'
 
 function MyApp({ Component, pageProps }) {
   return (

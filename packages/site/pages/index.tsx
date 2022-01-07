@@ -1,9 +1,7 @@
-import { ContentWrapper } from '../components/ContentWrapper'
 import { DynamicContent } from '../components/DynamicContent'
 import { MyPageSeo } from '../components/MyPageSeo'
 import { SimpleHeader } from '../components/SimpleHeader'
-import { TopBar } from '../components/TopBar'
-import { fetchAPI, fetchPageBySlug } from '../utils/api'
+import { fetchPageBySlug } from '../utils/api'
 
 
 

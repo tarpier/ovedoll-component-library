@@ -3,8 +3,29 @@ import { ContentWrapper } from '../components/ContentWrapper'
 import { TopBar } from '../components/TopBar'
 import '../styles/styles.css'
 import '../public/serviceworker.js'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import * as Fathom from 'fathom-client';
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    Fathom.load(process.env.FATHOM_TRACKING_TOKEN, {
+      includedDomains: ['www.ovedoll.de'],
+    });
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
+  }, []);
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">

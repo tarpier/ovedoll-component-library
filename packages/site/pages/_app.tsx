@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    Fathom.load(process.env.FATHOM_TRACKING_TOKEN, {
+    Fathom.load(process.env.NEXT_PUBLIC_FATHOM_TRACKING_TOKEN, {
       includedDomains: ['www.ovedoll.de'],
     });
 

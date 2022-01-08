@@ -3,25 +3,25 @@ const h2 = (node) => (
     {node.children}
   </h2>)
 
-const p = (node, ...props) => (
-  <p className="mb-5 text-xl text-copy" {...props}>
+const p = (node) => (
+  <p className="mb-5 text-xl text-copy">
     {node.children}
   </p>
 )
 
-const li = (node, ...props) => (
-  <li className="font-sans text-copy text-xl" {...props}>
+const li = (node) => (
+  <li className="font-sans text-copy text-xl">
     {node.children}
   </li>
 )
 
-const ul = (node, ...props) => (
+const ul = (node) => (
   <ul className="pl-20">
     {node.children}
   </ul>
 )
 
-const ol = (node, ...props) => (
+const ol = (node) => (
   <ol className="list-decimal">
     {node.children}
   </ol>

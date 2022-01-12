@@ -4,6 +4,8 @@ import { postData } from '../../utils/postData';
 import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
 import { mdConfig } from '../../utils/mdConfig';
+import * as Fathom from 'fathom-client';
+
 export interface IContactFormProps {
   headline: string
   copy: string;
@@ -28,6 +30,7 @@ export const ContactForm = ({ headline, copy, buttonLabel = 'Hire me today' }: I
   const onSubmit = async (data) => {
     const response = await postData('/api/sendForm', data);
     if (response.send) {
+      Fathom.trackGoal('2MLX0ZO6', 0)
       router.push('/success');
     }
   };

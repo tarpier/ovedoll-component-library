@@ -32,7 +32,7 @@ export default function Home({ pageContent }) {
           <SimpleHeader {...hero} />
         ) : null
       }
-      <main className="">
+      <main className="min-h-screen">
         <DynamicContent components={content} />
       </main>
     </>

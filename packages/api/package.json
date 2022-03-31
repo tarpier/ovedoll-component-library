@@ -11,14 +11,14 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.0.2",
-    "@strapi/plugin-users-permissions": "4.0.2",
-    "@strapi/plugin-i18n": "4.0.2",
+    "@strapi/strapi": "4.1.7",
+    "@strapi/plugin-users-permissions": "4.1.7",
+    "@strapi/plugin-i18n": "4.1.7",
     "pg": "8.6.0",
     "pg-connection-string": "2.5.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Ove Doll <moin@ovedoll.de"
   },
   "strapi": {
     "uuid": "1f86838a-8b47-48f8-9c05-190d3b82c3e2"

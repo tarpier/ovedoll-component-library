@@ -38,3 +38,7 @@ yarn-error.log*
 
 # docker pg data dump
 data/
+
+# random stuff
+.sync/
+Icon*

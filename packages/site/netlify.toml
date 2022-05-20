@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/list-globally-installed-npm-modules"
+  to = "/"
+  status = 301

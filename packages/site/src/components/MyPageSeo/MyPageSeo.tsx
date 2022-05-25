@@ -37,7 +37,7 @@ export const MyPageSeo: React.FC<TPageSeoProps> = (props) => {
         description,
         url: pageUrl,
         image: ogImageUrl,
-        // type: 'article',
+        type: 'website',
         siteName: 'Freelance Frontend Developer Ove Doll',
       }}
       twitter={{

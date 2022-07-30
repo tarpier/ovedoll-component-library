@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
-import { PortableText } from '@portabletext/react'
+import { PortableText, PortableTextReactComponents } from '@portabletext/react'
 import { Headline } from '../Headline'
 
-const baseComponents = {
+const baseComponents: Partial<PortableTextReactComponents> = {
   block: {
     h2: ({ children }) => (<Headline order='h2'>{children}</Headline>),
     h3: ({ children }) => (<Headline order='h3'>{children}</Headline>),
@@ -70,3 +70,5 @@ export function ProseableText({ value = [] }) {
     )
   )
 }
+
+

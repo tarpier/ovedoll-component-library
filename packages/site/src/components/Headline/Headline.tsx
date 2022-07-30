@@ -1,5 +1,5 @@
 export interface IHeadlineProps {
-  children: string,
+  children: React.ReactNode,
   order: 'h1' | 'h2' | 'h3' | 'h4'
 }
 

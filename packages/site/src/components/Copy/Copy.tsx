@@ -1,13 +1,13 @@
 import { ContentWrapper } from '../ContentWrapper';
-import ReactMarkdown from 'react-markdown';
-import { mdConfig } from '../../utils/mdConfig';
+import { ProseableText } from '../ProseableText';
 
 export interface ICopyProps {
-  copy: string;
+  copy: any[];
   dateLine?: string;
+  headline: string;
 }
 
-export const Copy = ({ copy, dateLine }: ICopyProps) => {
+export const Copy = ({ copy, dateLine, headline }: ICopyProps) => {
   return (
     <ContentWrapper className="pb-24">
       <div className="flex flex-col">
@@ -18,9 +18,9 @@ export const Copy = ({ copy, dateLine }: ICopyProps) => {
             </p>
           ) : null}
         </div>
-        <div className="prose">
-          <ReactMarkdown children={copy} components={mdConfig} />
-        </div>
+        <h2 className="font-sans text-3xl mb-4 font-bold tracking-tight text-headline sm:text-4xl leading-relaxed">{headline}</h2>
+        <ProseableText value={copy} />
+
       </div>
     </ContentWrapper>
   );

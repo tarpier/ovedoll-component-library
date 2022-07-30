@@ -44,6 +44,6 @@ export async function fetchPageContent(slug) {
     query,
     params
   );
-
+  // [0] is alway the non drafts version
   return pageContent[0]
 }

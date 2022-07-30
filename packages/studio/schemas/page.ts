@@ -64,19 +64,19 @@ export default {
       description: 'This sets the robots meta to no-index & no-follow value',
       type: 'boolean',
       fieldset: 'seo',
-      initialValue: false,
     },
   ],
   preview: {
     select: {
       name: 'name',
       slug: 'slug.current',
+      noIndex: 'noIndex'
     },
     prepare(selection: IPreviewSelection): IPrepare {
 
       return {
         title: selection.name,
-        subtitle: `slug: ${selection.slug}`
+        subtitle: `slug: ${selection.slug} ${selection.noIndex ? '- not indexed -' : ''}`
       };
     },
   },

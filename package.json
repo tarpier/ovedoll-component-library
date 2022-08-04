@@ -17,6 +17,7 @@
     "start:api": "yarn workspace @ovedoll/api strapi start",
     "build:site": "yarn workspace @ovedoll/site next build",
     "build:api": "yarn workspace @ovedoll/api strapi build",
+    "build:studio": "yarn workspace @ovedoll/studio build",
     "storybook": "yarn workspace @ovedoll/site start-storybook -p 6006",
     "build-storybook": "yarn workspace @ovedoll/site build-storybook"
   }

@@ -1,4 +1,26 @@
+import sanityClient from '@sanity/client';
 
+const client = sanityClient({
+  projectId: process.env.SANITY_API_PROJECT_ID,
+  dataset: process.env.SANITY_API_DATASET,
+  apiVersion: process.env.SANITY_API_VERSION,
+  token: process.env.SANITY_TOKEN,
+  useCdn: false,
+});
+
+export async function getAllPages() {
+  const query = `*[_type=='page']{
+    'slug': slug.current
+    }`
+  const params = {}
+
+  const allPageSlugs = await client.fetch(
+    query,
+    params
+  );
+
+  return allPageSlugs
+}
 
 export function getStrapiURL(path = "") {
   return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
@@ -13,11 +35,15 @@ export async function fetchAPI(path) {
   return data;
 }
 
-// Get all page data for specific path and populate dynamic zones or component zones
-export async function fetchPageBySlug(slug) {
-  const requestUrl = getStrapiURL(`/api/pages?filters[slug][$eq]=${slug}&populate=%2A`);
+// TODO: type slug und isRootPage als either or
+export async function fetchPageContent(slug) {
+  const query = `*[_type=='page' && slug.current == $slug]`
+  const params = { slug }
 
-  const response = await fetch(requestUrl);
-  const data = await response.json();
-  return data?.data?.[0];
+  const pageContent = await client.fetch(
+    query,
+    params
+  );
+  // [0] is alway the non drafts version
+  return pageContent[0]
 }

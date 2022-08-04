@@ -8,6 +8,15 @@ module.exports = {
     fontFamily: {
       sans: ['Basier', ...defaultTheme.fontFamily.sans]
     },
+    fontMetrics: {
+      sans: {
+          capHeight: 48,
+          ascent: 980,
+          descent: 265,
+          lineGap: 24,
+          unitsPerEm: 1000,
+      },
+  },
     extend: {
       colors: {
         copy: colors.gray[600],
@@ -19,5 +28,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('tailwindcss-capsize')]
 };

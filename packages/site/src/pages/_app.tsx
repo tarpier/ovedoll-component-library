@@ -2,7 +2,8 @@ import 'tailwindcss/tailwind.css'
 import { ContentWrapper } from '../components/ContentWrapper'
 import { TopBar } from '../components/TopBar'
 import '../styles/styles.css'
-import '../public/serviceworker.js'
+import '../styles/fonts.css'
+import '../../public/serviceworker'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as Fathom from 'fathom-client';

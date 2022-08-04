@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../ContentWrapper";
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 import { mdConfig } from "../../utils/mdConfig";
 
 interface IHeadlineTextHorizontalProps {
@@ -25,7 +25,7 @@ export const HeadlineTextHorizontal = ({ headline1, headline2, headline3, copy }
           </h2>
         </div>
         <div className="md:w-1/2 prose">
-          <ReactMarkdown children={copy} components={mdConfig} />
+          {/* <ReactMarkdown children={copy} components={mdConfig} /> */}
         </div>
       </div>
     </ContentWrapper>

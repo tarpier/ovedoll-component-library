@@ -1,4 +1,5 @@
 import { ContentWrapper } from "../ContentWrapper"
+import { Headline } from "../Headline"
 
 export interface ISimpleHeaderProps {
   dateLine: string
@@ -15,9 +16,9 @@ export const SimpleHeader = ({ dateLine, headline, copy }: ISimpleHeaderProps) =
             {dateLine}
           </p>
         </div>
-        <h1 className="max-w-lg lg:max-w-5xl mb-6 font-sans text-[2.75rem] font-bold leading-tight sm:leading-none tracking-tight text-headline sm:text-[5rem] md:mx-auto">
+        <Headline order='h1'>
           {headline}
-        </h1>
+        </Headline>
         <p className="text-lg text-copy md:text-xl md:max-w-2xl mx-auto">
           {copy}
         </p>

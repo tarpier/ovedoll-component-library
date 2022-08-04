@@ -1,0 +1,1 @@
+export { ProseableText } from './ProseableText'

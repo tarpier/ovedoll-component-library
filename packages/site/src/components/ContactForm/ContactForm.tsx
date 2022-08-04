@@ -2,7 +2,7 @@ import { ContentWrapper } from '../ContentWrapper';
 import { useForm } from 'react-hook-form';
 import { postData } from '../../utils/postData';
 import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 import { mdConfig } from '../../utils/mdConfig';
 import * as Fathom from 'fathom-client';
 
@@ -63,7 +63,7 @@ export const ContactForm = ({ headline, copy, buttonLabel = 'Hire me today' }: I
                 {headline}
               </h2>
               <div className="prose">
-                <ReactMarkdown children={copy} components={mdConfig} />
+                {/* <ReactMarkdown children={copy} components={mdConfig} /> */}
               </div>
             </div>
           </div>

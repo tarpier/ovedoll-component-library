@@ -2,10 +2,13 @@ export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  fieldsets: [
+    { name: 'seo', title: 'SEO Meta Data' }
+  ],
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Page Title',
       type: 'string',
     },
     {
@@ -46,6 +49,19 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+      fieldset: 'seo'
+    },
+    {
+      name: 'noIndex',
+      title: 'Disable indexing',
+      description: 'This sets the robots meta to no-index & no-follow value',
+      type: 'boolean',
+      fieldset: 'seo',
     },
   ],
 

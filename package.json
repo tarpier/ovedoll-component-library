@@ -20,5 +20,6 @@
     "build:studio": "yarn workspace @ovedoll/studio build",
     "storybook": "yarn workspace @ovedoll/site start-storybook -p 6006",
     "build-storybook": "yarn workspace @ovedoll/site build-storybook"
-  }
+  },
+  "dependencies": {}
 }

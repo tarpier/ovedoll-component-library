@@ -6,7 +6,6 @@ export default {
   type: 'document',
   fieldsets: [
     { name: 'seo', title: 'SEO Meta Data' }
-
   ],
   fields: [
     {

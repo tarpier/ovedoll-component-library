@@ -42,3 +42,29 @@ features: [
   },
 ]
 };
+
+export const Jamstack = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Jamstack.args = {
+  headline: 'Frontend Developer',
+features: [
+  {
+    name: 'Super-fast websites.',
+    description:
+      "Your website is an important part of your business. Why not make it a fast one? For blazing-fast performance, no database means no time-consuming queries on every request. Get your Jamstack website started today!",
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'The best of both worlds.',
+    description:
+      "If you're looking for the best of both worlds, going static is the way to go. Static sites offer better performance therefore more search engine ranking capabilities, which can lead to higher conversions and lower customer acquisition costs. Jamstack websites are a new first-class web development solution that allow you to take advantage of the best features of both worlds—dynamic content on a static site.",
+    icon: ScaleIcon,
+  },
+  {
+    name: 'Static websites with no plugins or databases are like a fortress',
+    description:
+      " Static websites are more secure and reliable. No plugins, databases, or hidden code means your website is free from hackers and data breaches. Our static Jamstack websites with a robust build process take care of the heavy lifting for you so you don’t have to worry about it.",
+    icon: LightningBoltIcon,
+  },
+]
+};

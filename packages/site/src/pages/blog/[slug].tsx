@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
     return { params: { slug: entry.slug } }
   })
-// console.log(paths)
+
   return {
     paths,
     fallback: false,
@@ -24,7 +24,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log('params',params)
   const slug = slugParamToPath(params?.slug)
   console.log(slug)
   const pageContent = await fetchPageContent(slug, 'post')
@@ -35,7 +34,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Page({ pageContent }) {
+export default function BlogPostPage({ pageContent }) {
   const { hero, body, slug, title, description, noIndex } = pageContent
 
   return (

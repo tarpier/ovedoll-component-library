@@ -24,7 +24,12 @@ export async function getAllPages() {
 
 export async function getAllBlogPosts() {
   const query = `*[_type=='post']{
-    'slug': slug.current
+    'slug': slug.current,
+    author -> {},
+    body,
+    categories,
+    publishedAt,
+    title
     }`
   const params = {}
 

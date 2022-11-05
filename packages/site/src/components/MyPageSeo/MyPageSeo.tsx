@@ -22,7 +22,7 @@ export const MyPageSeo: React.FC<TPageSeoProps> = (props) => {
   const APP_ROOT_URL = process.env.NEXT_PUBLIC_APP_ROOT_URL;
 
   // Absolute page url
-  const pageUrl = APP_ROOT_URL + '/' + path
+  const pageUrl = path === '/' ? APP_ROOT_URL : APP_ROOT_URL + '/' + path
   // Absolute og image url
   const ogImageUrl = APP_ROOT_URL + ogImagePath
 

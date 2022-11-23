@@ -10,8 +10,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:site": "yarn workspace @ovedoll/site next dev",
+    "dev:site": "yarn workspace @ovedoll/site dev",
     "dev:api": "yarn workspace @ovedoll/api strapi develop",
+    "dev:studio": "yarn workspace @ovedoll/studio dev",
     "start:studio": "yarn workspace @ovedoll/studio start",
     "start:site": "yarn workspace @ovedoll/site next start",
     "start:api": "yarn workspace @ovedoll/api strapi start",

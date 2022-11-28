@@ -6,9 +6,9 @@
   "component": {
     "default": {
       "customTemplates": {
-        "index": "./templates/component/index.ts",
-        "component": "./templates/component/TemplateName.tsx",
-        "story": "./templates/component/TemplateName.stories.tsx"
+        "index": "./generatorTemplates/component/index.ts",
+        "component": "./generatorTemplates/component/TemplateName.tsx",
+        "story": "./generatorTemplates/component/TemplateName.stories.tsx"
       },
       "path": "src/components",
       "withIndex": true,
@@ -19,7 +19,7 @@
     },
     "page": {
       "customTemplates": {
-        "component": "./templates/page/TemplateName.tsx"
+        "component": "./generatorTemplates/page/TemplateName.tsx"
       },
       "path": "src/pages",
       "withStyle": false,

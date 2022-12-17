@@ -13,10 +13,11 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/ui": "1.0.0-beta.32",
+    "@sanity/vision": "^3.0.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-is": "^17.0.0",
-    "@sanity/ui": "1.0.0-beta.32",
     "sanity": "3.0.0-rc.2",
     "styled-components": "^5.2.0"
   },

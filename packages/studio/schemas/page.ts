@@ -18,19 +18,22 @@ export default {
       name: 'title',
       title: 'Page Title',
       type: 'string',
-    },
+    }, 
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      //hidden: ({ document }: { document: any }) => document?.isRootPage,
       options: {
-        source: 'title',
-        slugify: (input: string) => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
-      }
+        source: "title",
+        slugify: (input: string) =>
+          input
+            .toLowerCase()
+            //Remove spaces
+            .replace(/\s+/g, "-")
+            //Remove special characters
+            .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
+        validation: (Rule) => Rule.required(),
+      },
     },
     {
       name: 'hero',

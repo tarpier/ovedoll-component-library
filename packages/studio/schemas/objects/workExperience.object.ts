@@ -8,7 +8,7 @@ export const workExperience = defineType(
         fields: [
             {
                 name: 'position',
-                title: 'Position',
+                title: 'Position / Role',
                 type: 'string'
             },
             {
@@ -77,7 +77,7 @@ export const workExperience = defineType(
             {
                 name: 'longDescription',
                 title: 'Long Description',
-                type: 'text'
+                type: 'blockContent'
             }
         ],
         preview: {

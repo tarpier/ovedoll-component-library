@@ -1,6 +1,10 @@
 import React, { useMemo } from 'react'
 import { PortableText, PortableTextReactComponents } from '@portabletext/react'
 import { Headline } from '../Headline'
+import Refractor from 'react-refractor'
+import js from 'refractor/lang/javascript'
+Refractor.registerLanguage(js)
+
 
 const baseComponents: Partial<PortableTextReactComponents> = {
   block: {
@@ -59,16 +63,41 @@ export function ProseableText({ value = [] }) {
 
   if (!valueGroups?.length) return null
 
-  return valueGroups.map((group) =>
-    group[0]._type === 'block' ? (
-      <div key={group[0]._key} className="prose py-4">
-        <PortableText value={group} components={baseComponents} />
-      </div>
-    ) : (
+  return valueGroups.map((group) => {
+    // if (group[0]._type === 'block') {
+    //   <div key={group[0]._key} className="prose py-4">
+    //     <PortableText value={group} components={baseComponents} />
+    //   </div>
+    // }
+
+    switch (group[0]._type) {
+      case 'block':
+        return (
+          <div key={group[0]._key} className="prose py-4">
+            <PortableText value={group} components={baseComponents} />
+          </div>
+        )
+      case 'code':
+          return (
+            <div key={group[0]._key}>
+              {group[0].filename ? (<span className='italic text-right block text-headline'>{group[0].filename}</span>) : null}
+              <Refractor language="js" value={group[0].code} />
+            </div>
+          )
+
+      default:
+        console.log(`encountered unknown block type ${group[0]._type}`)
+        return null
+    }
+  })
+
+
+
+
       // TODO add custom render here
-      <PortableText key={group[0]._key} value={group} components={baseComponents} />
-    )
-  )
+      // <PortableText key={group[0]._key} value={group} components={baseComponents} />
+    
+  
 }
 
 

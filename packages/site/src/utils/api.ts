@@ -22,6 +22,25 @@ export async function getAllPages() {
   return allPageSlugs
 }
 
+export async function getAllBlogPosts() {
+  const query = `*[_type=='post']{
+    'slug': slug.current,
+    author -> {},
+    body,
+    categories,
+    publishedAt,
+    title
+    }`
+  const params = {}
+
+  const allBlogPosts = await client.fetch(
+    query,
+    params
+  );
+
+  return allBlogPosts
+}
+
 export function getStrapiURL(path = "") {
   return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
     }${path}`;
@@ -35,10 +54,10 @@ export async function fetchAPI(path) {
   return data;
 }
 
-// TODO: type slug und isRootPage als either or
-export async function fetchPageContent(slug) {
-  const query = `*[_type=='page' && slug.current == $slug]`
-  const params = { slug }
+
+export async function fetchPageContent(slug: string, type='page') {
+  const query = `*[_type==$type && slug.current == $slug]`
+  const params = { slug, type }
 
   const pageContent = await client.fetch(
     query,

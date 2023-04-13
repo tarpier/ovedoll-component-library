@@ -21,7 +21,7 @@ export default function TemplateName({ pageContent }) {
       />
       
       <main className="min-h-screen">
-        <h1>{TemplateName} page</h1>
+        <h1>{TemplateName} Page</h1>
       </main>
     </>
   )

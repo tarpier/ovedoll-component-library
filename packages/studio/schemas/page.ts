@@ -1,6 +1,6 @@
-import { IPrepare, IPreviewSelection } from "./schemaTypes";
+import { defineType } from "sanity";
 
-export default {
+export default defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
@@ -17,19 +17,22 @@ export default {
       name: 'title',
       title: 'Page Title',
       type: 'string',
-    },
+    }, 
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      //hidden: ({ document }: { document: any }) => document?.isRootPage,
       options: {
-        source: 'title',
-        slugify: (input: string) => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
-      }
+        source: "title",
+        slugify: (input) =>
+          input
+            .toLowerCase()
+            //Remove spaces
+            .replace(/\s+/g, "-")
+            //Remove special characters
+            .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
+          },
+          validation: (Rule) => Rule.required(),
     },
     {
       name: 'hero',
@@ -71,7 +74,7 @@ export default {
       slug: 'slug.current',
       noIndex: 'noIndex'
     },
-    prepare(selection: IPreviewSelection): IPrepare {
+    prepare(selection) {
 
       return {
         title: selection.name,
@@ -79,4 +82,4 @@ export default {
       };
     },
   },
-}
+})

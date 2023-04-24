@@ -8,6 +8,21 @@ const client = sanityClient({
   useCdn: false,
 });
 
+export async function getAllSitemapData() {
+  const query = `*[_type=='page' && noIndex == false]{
+    'slug': slug.current,
+    'updatedAt': _updatedAt
+    }`
+  const params = {}
+
+  const sitemapData = await client.fetch(
+    query,
+    params
+  );
+
+  return sitemapData
+}
+
 export async function getAllPages() {
   const query = `*[_type=='page']{
     'slug': slug.current
@@ -20,6 +35,25 @@ export async function getAllPages() {
   );
 
   return allPageSlugs
+}
+
+export async function getAllBlogPosts() {
+  const query = `*[_type=='post']{
+    'slug': slug.current,
+    author -> {},
+    body,
+    categories,
+    publishedAt,
+    title
+    }`
+  const params = {}
+
+  const allBlogPosts = await client.fetch(
+    query,
+    params
+  );
+
+  return allBlogPosts
 }
 
 export function getStrapiURL(path = "") {
@@ -35,10 +69,10 @@ export async function fetchAPI(path) {
   return data;
 }
 
-// TODO: type slug und isRootPage als either or
-export async function fetchPageContent(slug) {
-  const query = `*[_type=='page' && slug.current == $slug]`
-  const params = { slug }
+
+export async function fetchPageContent(slug: string, type='page') {
+  const query = `*[_type==$type && slug.current == $slug]`
+  const params = { slug, type }
 
   const pageContent = await client.fetch(
     query,

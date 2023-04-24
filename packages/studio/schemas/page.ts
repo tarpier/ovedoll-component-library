@@ -1,12 +1,11 @@
-import { IPrepare, IPreviewSelection } from "./schemaTypes";
+import { defineType } from "sanity";
 
-export default {
+export default defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
   fieldsets: [
     { name: 'seo', title: 'SEO Meta Data' }
-
   ],
   fields: [
     {
@@ -25,15 +24,15 @@ export default {
       type: 'slug',
       options: {
         source: "title",
-        slugify: (input: string) =>
+        slugify: (input) =>
           input
             .toLowerCase()
             //Remove spaces
             .replace(/\s+/g, "-")
             //Remove special characters
             .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
-        validation: (Rule) => Rule.required(),
-      },
+          },
+          validation: (Rule) => Rule.required(),
     },
     {
       name: 'hero',
@@ -75,7 +74,7 @@ export default {
       slug: 'slug.current',
       noIndex: 'noIndex'
     },
-    prepare(selection: IPreviewSelection): IPrepare {
+    prepare(selection) {
 
       return {
         title: selection.name,
@@ -83,4 +82,4 @@ export default {
       };
     },
   },
-}
+})

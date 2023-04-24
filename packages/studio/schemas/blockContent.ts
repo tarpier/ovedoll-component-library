@@ -61,5 +61,19 @@ export default {
       type: 'image',
       options: { hotspot: true },
     },
+    {
+      type: 'code',
+      options: {
+        theme: 'github',
+        darkTheme: 'terminal',
+        language: 'js',
+        withFilename: true,
+        languageAlternatives: [
+          { title: 'Javascript', value: 'js' },
+          { title: 'HTML', value: 'html' },
+          { title: 'CSS', value: 'css' },
+        ]
+      }
+    },
   ],
 }

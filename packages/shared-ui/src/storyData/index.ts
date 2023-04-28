@@ -1,4 +1,4 @@
-// import { toHTML } from "@portabletext/to-html";
+import { toHTML } from "@portabletext/to-html";
 // import { type SanityAddress } from "../components/types";
 
 // const ADDRESS: Record<string, SanityAddress> = {
@@ -91,265 +91,265 @@ const TEXT = {
   },
 };
 
-// const PORTABLE_TEXT = {
-//   SHORT: [
-//     {
-//       _key: "e79610d7b782",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "c15b7e285cd80",
-//           _type: "span",
-//           marks: [],
-//           text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//   ],
-//   MEDIUM: [
-//     {
-//       _key: "e79610d7b782",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "c15b7e285cd80",
-//           _type: "span",
-//           marks: [],
-//           text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "1553511540db",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "d439b8be9d35",
-//           _type: "span",
-//           marks: [],
-//           text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint occaecat adipisicing exercitation laboris. Aliquip qui non minim occaecat.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//   ],
-//   LONG: [
-//     {
-//       _key: "e79610d7b782",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "c15b7e285cd80",
-//           _type: "span",
-//           marks: [],
-//           text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "1553511540db",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "d439b8be9d35",
-//           _type: "span",
-//           marks: [],
-//           text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint occaecat adipisicing exercitation laboris. Aliquip qui non minim occaecat.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "4f165e33af00",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "ef23ce4cde8d",
-//           _type: "span",
-//           marks: [],
-//           text: "",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "68ab9fb1c384",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "f4ce94cc24db",
-//           _type: "span",
-//           marks: [],
-//           text: "Mollit laborum aliqua cupidatat veniam culpa quis mollit. Dolor esse quis excepteur. Officia occaecat adipisicing aliquip tempor elit anim quis proident labore quis do laborum. Cupidatat duis nostrud adipisicing esse nulla tempor exercitation dolor tempor duis consectetur occaecat ad ex sunt.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//   ],
-//   MINIMALRICHTEXT: [
-//     {
-//       _key: "e79610d7b782",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "c15b7e285cd80",
-//           _type: "span",
-//           marks: [],
-//           text: "Labore anim ",
-//         },
-//         {
-//           _key: "cedb0c2ef084",
-//           _type: "span",
-//           marks: ["strong"],
-//           text: "proident proident sunt",
-//         },
-//         {
-//           _key: "346db6fb666d",
-//           _type: "span",
-//           marks: [],
-//           text: " enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor ",
-//         },
-//         {
-//           _key: "8c5ab301214e",
-//           _type: "span",
-//           marks: ["em"],
-//           text: "mollit et magna sit dolore consectetur",
-//         },
-//         {
-//           _key: "40b67450819e",
-//           _type: "span",
-//           marks: [],
-//           text: " reprehenderit. Deserunt aliquip do ",
-//         },
-//         {
-//           _key: "98757893421a",
-//           _type: "span",
-//           marks: ["58f1594cdb89"],
-//           text: "magna reprehenderit ",
-//         },
-//         {
-//           _key: "c5c9edc62280",
-//           _type: "span",
-//           marks: [],
-//           text: "qui cillum cupidatat enim consectetur dolor.",
-//         },
-//       ],
-//       markDefs: [
-//         {
-//           _key: "58f1594cdb89",
-//           _type: "link",
-//           href: "#",
-//         },
-//       ],
-//       style: "normal",
-//     },
-//     {
-//       _key: "1553511540db",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "d439b8be9d35",
-//           _type: "span",
-//           marks: [],
-//           text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint ",
-//         },
-//         {
-//           _key: "e80dea950883",
-//           _type: "span",
-//           marks: ["strong"],
-//           text: "occaecat adipisicing ",
-//         },
-//         {
-//           _key: "3dcf1a9fbf83",
-//           _type: "span",
-//           marks: [],
-//           text: "exercitation laboris. Aliquip qui non minim occaecat.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "f39b44809097",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "a79b8bf766e6",
-//           _type: "span",
-//           marks: [],
-//           text: "Mollit laborum",
-//         },
-//       ],
-//       level: 1,
-//       listItem: "bullet",
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "27f996dacd43",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "cdb3ca7cc513",
-//           _type: "span",
-//           marks: [],
-//           text: "proident labore quis do laborum",
-//         },
-//       ],
-//       level: 1,
-//       listItem: "bullet",
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "aa02e83f887a",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "9046d66dd2a4",
-//           _type: "span",
-//           marks: [],
-//           text: "Cupidatat duis",
-//         },
-//       ],
-//       level: 1,
-//       listItem: "bullet",
-//       markDefs: [],
-//       style: "normal",
-//     },
-//     {
-//       _key: "68ab9fb1c384",
-//       _type: "block",
-//       children: [
-//         {
-//           _key: "f4ce94cc24db",
-//           _type: "span",
-//           marks: [],
-//           text: "Mollit laborum aliqua cupidatat veniam culpa quis mollit. Dolor esse quis excepteur. Officia occaecat adipisicing aliquip tempor elit anim quis proident labore quis do laborum. Cupidatat duis nostrud adipisicing esse nulla tempor exercitation dolor tempor duis consectetur occaecat ad ex sunt.",
-//         },
-//       ],
-//       markDefs: [],
-//       style: "normal",
-//     },
-//   ],
-// };
+const PORTABLE_TEXT = {
+  SHORT: [
+    {
+      _key: "e79610d7b782",
+      _type: "block",
+      children: [
+        {
+          _key: "c15b7e285cd80",
+          _type: "span",
+          marks: [],
+          text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+  ],
+  MEDIUM: [
+    {
+      _key: "e79610d7b782",
+      _type: "block",
+      children: [
+        {
+          _key: "c15b7e285cd80",
+          _type: "span",
+          marks: [],
+          text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "1553511540db",
+      _type: "block",
+      children: [
+        {
+          _key: "d439b8be9d35",
+          _type: "span",
+          marks: [],
+          text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint occaecat adipisicing exercitation laboris. Aliquip qui non minim occaecat.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+  ],
+  LONG: [
+    {
+      _key: "e79610d7b782",
+      _type: "block",
+      children: [
+        {
+          _key: "c15b7e285cd80",
+          _type: "span",
+          marks: [],
+          text: "Labore anim proident proident sunt enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor mollit et magna sit dolore consectetur reprehenderit. Deserunt aliquip do magna reprehenderit qui cillum cupidatat enim consectetur dolor.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "1553511540db",
+      _type: "block",
+      children: [
+        {
+          _key: "d439b8be9d35",
+          _type: "span",
+          marks: [],
+          text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint occaecat adipisicing exercitation laboris. Aliquip qui non minim occaecat.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "4f165e33af00",
+      _type: "block",
+      children: [
+        {
+          _key: "ef23ce4cde8d",
+          _type: "span",
+          marks: [],
+          text: "",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "68ab9fb1c384",
+      _type: "block",
+      children: [
+        {
+          _key: "f4ce94cc24db",
+          _type: "span",
+          marks: [],
+          text: "Mollit laborum aliqua cupidatat veniam culpa quis mollit. Dolor esse quis excepteur. Officia occaecat adipisicing aliquip tempor elit anim quis proident labore quis do laborum. Cupidatat duis nostrud adipisicing esse nulla tempor exercitation dolor tempor duis consectetur occaecat ad ex sunt.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+  ],
+  MINIMALRICHTEXT: [
+    {
+      _key: "e79610d7b782",
+      _type: "block",
+      children: [
+        {
+          _key: "c15b7e285cd80",
+          _type: "span",
+          marks: [],
+          text: "Labore anim ",
+        },
+        {
+          _key: "cedb0c2ef084",
+          _type: "span",
+          marks: ["strong"],
+          text: "proident proident sunt",
+        },
+        {
+          _key: "346db6fb666d",
+          _type: "span",
+          marks: [],
+          text: " enim ipsum ea voluptate ipsum fugiat ipsum in. Sit mollit anim pariatur nulla velit ullamco non veniam nulla. Nostrud dolor ",
+        },
+        {
+          _key: "8c5ab301214e",
+          _type: "span",
+          marks: ["em"],
+          text: "mollit et magna sit dolore consectetur",
+        },
+        {
+          _key: "40b67450819e",
+          _type: "span",
+          marks: [],
+          text: " reprehenderit. Deserunt aliquip do ",
+        },
+        {
+          _key: "98757893421a",
+          _type: "span",
+          marks: ["58f1594cdb89"],
+          text: "magna reprehenderit ",
+        },
+        {
+          _key: "c5c9edc62280",
+          _type: "span",
+          marks: [],
+          text: "qui cillum cupidatat enim consectetur dolor.",
+        },
+      ],
+      markDefs: [
+        {
+          _key: "58f1594cdb89",
+          _type: "link",
+          href: "#",
+        },
+      ],
+      style: "normal",
+    },
+    {
+      _key: "1553511540db",
+      _type: "block",
+      children: [
+        {
+          _key: "d439b8be9d35",
+          _type: "span",
+          marks: [],
+          text: "Nisi ex et veniam exercitation adipisicing do tempor reprehenderit amet. Eu cupidatat mollit labore adipisicing ut laboris adipisicing veniam labore non Lorem aliquip. Excepteur labore labore duis consequat dolore reprehenderit voluptate cupidatat aute nulla laboris sunt. Ad velit ad amet laborum occaecat anim aliquip pariatur ipsum consectetur anim quis excepteur. Pariatur irure ea excepteur. Id tempor reprehenderit Lorem pariatur consectetur sint ",
+        },
+        {
+          _key: "e80dea950883",
+          _type: "span",
+          marks: ["strong"],
+          text: "occaecat adipisicing ",
+        },
+        {
+          _key: "3dcf1a9fbf83",
+          _type: "span",
+          marks: [],
+          text: "exercitation laboris. Aliquip qui non minim occaecat.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "f39b44809097",
+      _type: "block",
+      children: [
+        {
+          _key: "a79b8bf766e6",
+          _type: "span",
+          marks: [],
+          text: "Mollit laborum",
+        },
+      ],
+      level: 1,
+      listItem: "bullet",
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "27f996dacd43",
+      _type: "block",
+      children: [
+        {
+          _key: "cdb3ca7cc513",
+          _type: "span",
+          marks: [],
+          text: "proident labore quis do laborum",
+        },
+      ],
+      level: 1,
+      listItem: "bullet",
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "aa02e83f887a",
+      _type: "block",
+      children: [
+        {
+          _key: "9046d66dd2a4",
+          _type: "span",
+          marks: [],
+          text: "Cupidatat duis",
+        },
+      ],
+      level: 1,
+      listItem: "bullet",
+      markDefs: [],
+      style: "normal",
+    },
+    {
+      _key: "68ab9fb1c384",
+      _type: "block",
+      children: [
+        {
+          _key: "f4ce94cc24db",
+          _type: "span",
+          marks: [],
+          text: "Mollit laborum aliqua cupidatat veniam culpa quis mollit. Dolor esse quis excepteur. Officia occaecat adipisicing aliquip tempor elit anim quis proident labore quis do laborum. Cupidatat duis nostrud adipisicing esse nulla tempor exercitation dolor tempor duis consectetur occaecat ad ex sunt.",
+        },
+      ],
+      markDefs: [],
+      style: "normal",
+    },
+  ],
+};
 
-// const COPY_TEXT = {
-//   SHORT: toHTML(PORTABLE_TEXT.SHORT, {}),
-//   MEDIUM: toHTML(PORTABLE_TEXT.MEDIUM, {}),
-//   LONG: toHTML(PORTABLE_TEXT.LONG, {}),
-//   MINIMALRICHTEXT: toHTML(PORTABLE_TEXT.MINIMALRICHTEXT, {}),
-// };
+const COPY_TEXT = {
+  SHORT: toHTML(PORTABLE_TEXT.SHORT, {}),
+  MEDIUM: toHTML(PORTABLE_TEXT.MEDIUM, {}),
+  LONG: toHTML(PORTABLE_TEXT.LONG, {}),
+  MINIMALRICHTEXT: toHTML(PORTABLE_TEXT.MINIMALRICHTEXT, {}),
+};
 
 // const IMAGE_URL = {
 //   "16/9": {
@@ -373,4 +373,4 @@ const TEXT = {
 // } as const;
 
 // export { TEXT, PORTABLE_TEXT, COPY_TEXT, IMAGE_URL, LINK_LIST, ADDRESS };
-export {TEXT}
+export {TEXT, COPY_TEXT}

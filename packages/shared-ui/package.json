@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
+    "@portabletext/to-html": "^2.0.0",
     "@types/node": "18.15.13",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",

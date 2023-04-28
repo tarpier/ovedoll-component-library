@@ -1,16 +1,16 @@
 import React from "react";
-import { Heading } from "./";
+import { Heading } from "./Heading";
 import { StoryObj, type Meta, type StoryFn } from "@storybook/react";
 import { TEXT } from "../../../storyData";
 
 const ComponentMeta: Meta<typeof Heading> = {
-  title: 'Atoms/Heading',
+  title: 'Components/Atoms/Heading',
   component: Heading,
   tags: ["autodocs"],
   argTypes: {},
   decorators: [
     (Story) => (
-      <div className="bg-white text-black">
+      <div className="bg-white text-black max-w-screen-xl">
         <Story />
       </div>
     

@@ -12,14 +12,14 @@ module.exports = {
       handwriting: ['"gochi hand"', 'sans-serif']
     },
     fontSize: {
-      sm: ['0.85rem', { lineHeight: '1.25rem' }],
-      base: ['1rem', { lineHeight: '1.5rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.333rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.777rem', { lineHeight: '2rem' }],
-      '3xl': ['2.369rem', { lineHeight: '2.25rem' }],
-      '4xl': ['3.157rem', { lineHeight: '2.5rem' }],
-      '5xl': ['4.209rem', { lineHeight: '1' }]
+      sm: ['0.85rem', { lineHeight: 1.25 }],
+      base: ['1rem', { lineHeight: 1.75 }],
+      lg: ['1.125rem', { lineHeight: 1.3 }],
+      xl: ['1.333rem', { lineHeight: 1.3 }],
+      '2xl': ['1.777rem', { lineHeight: 1.3 }],
+      '3xl': ['2.369rem', { lineHeight: 1.3 }],
+      '4xl': ['3.157rem', { lineHeight: 1.3 }],
+      '5xl': ['4.209rem', { lineHeight: 1.3 }]
     },
     letterSpacing: {
       tighter: '-0.05em',

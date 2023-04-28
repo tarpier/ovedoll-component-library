@@ -3,7 +3,7 @@ import type { ReactNode, HTMLAttributes, ComponentProps } from "react";
 import classnames from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const validLevels = [1, 2, 3, 4, 5] as const;
+export const validLevels = [1, 2, 3, 4, 5] as const;
 const alternateElements = ["span", "p"] as const;
 type ValidElements =
   | `h${(typeof validLevels)[number]}`

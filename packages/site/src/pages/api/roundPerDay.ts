@@ -42,11 +42,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const groupedTotal = Object.keys(grouped).map(key => {
       let total = 0
+      let totalWithFactor = 0
       grouped[key].map(item => {
         total = total + item.duration
+        totalWithFactor = totalWithFactor + item.durationWithFactor
       })
       return {
-        [key]: [...grouped[key]], total: total
+        [key]: [...grouped[key]], total: total, totalWithFactor
       }
     })
 

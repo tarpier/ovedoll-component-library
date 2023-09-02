@@ -27,8 +27,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const roundPerTask = (data) => {
 
       return data.map(task => {
+        const FACTOR = 1.2
+        const duration = parseFloat(task.duration) * FACTOR
         return {
-          ...task, duration: Math.ceil(parseFloat(task.duration) / 0.25) * 0.25
+          ...task, duration: Math.ceil(duration / 0.25) * 0.25
         }
       })
     }

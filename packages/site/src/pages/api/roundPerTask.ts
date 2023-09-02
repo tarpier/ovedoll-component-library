@@ -28,9 +28,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       return data.map(task => {
         const FACTOR = 1.2
-        const duration = parseFloat(task.duration) * FACTOR
+        const durationWithFactor = parseFloat(task.duration) * FACTOR
         return {
-          ...task, duration: Math.ceil(duration / 0.25) * 0.25
+          ...task, 
+          durationWithFactor: Math.ceil(durationWithFactor / 0.25) * 0.25,
+          duration: Math.ceil(parseFloat(task.duration) / 0.25) * 0.25
         }
       })
     }

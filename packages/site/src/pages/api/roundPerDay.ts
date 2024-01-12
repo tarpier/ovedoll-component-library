@@ -28,8 +28,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const roundPerTask = (data) => {
 
       return data.map(task => {
+        const FACTOR = 1.2
+        const durationWithFactor = parseFloat(task.duration) * FACTOR
         return {
-          ...task, duration: Math.ceil(parseFloat(task.duration) / 0.25) * 0.25
+          ...task, 
+          durationWithFactor: Math.ceil(durationWithFactor / 0.25) * 0.25,
+          duration: Math.ceil(parseFloat(task.duration) / 0.25) * 0.25
         }
       })
     }
@@ -38,11 +42,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const groupedTotal = Object.keys(grouped).map(key => {
       let total = 0
+      let totalWithFactor = 0
       grouped[key].map(item => {
         total = total + item.duration
+        totalWithFactor = totalWithFactor + item.durationWithFactor
       })
       return {
-        [key]: [...grouped[key]], total: total
+        [key]: [...grouped[key]], total: total, totalWithFactor
       }
     })
 

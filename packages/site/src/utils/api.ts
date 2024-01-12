@@ -8,6 +8,21 @@ const client = sanityClient({
   useCdn: false,
 });
 
+export async function getAllSitemapData() {
+  const query = `*[_type=='page' && noIndex == false]{
+    'slug': slug.current,
+    'updatedAt': _updatedAt
+    }`
+  const params = {}
+
+  const sitemapData = await client.fetch(
+    query,
+    params
+  );
+
+  return sitemapData
+}
+
 export async function getAllPages() {
   const query = `*[_type=='page']{
     'slug': slug.current

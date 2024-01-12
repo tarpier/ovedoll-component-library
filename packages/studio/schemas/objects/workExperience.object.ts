@@ -40,25 +40,25 @@ export const workExperience = defineType(
                     ]
                 },
             },
-            {
-                name: 'startDate',
-                title: 'Start Date',
-                type: 'date',
-                validation: Rule => Rule.required(),
-                options: {
-                    dateFormat: 'DD-MM-YYYY',
-                    calendarTodayLabel: 'Today'
-                }
-            },
-            {
-                name: 'endDate',
-                title: 'End Date',
-                type: 'date',
-                options: {
-                    dateFormat: 'DD-MM-YYYY',
-                    calendarTodayLabel: 'Today'
-                }
-            },
+            // {
+            //     name: 'startDate',
+            //     title: 'Start Date',
+            //     type: 'date',
+            //     validation: Rule => Rule.required(),
+            //     options: {
+            //         dateFormat: 'YYYY-MM-DD',
+            //         calendarTodayLabel: 'Today'
+            //     }
+            // },
+            // {
+            //     name: 'endDate',
+            //     title: 'End Date',
+            //     type: 'date',
+            //     options: {
+            //         dateFormat: 'YYYY-MM-DD',
+            //         calendarTodayLabel: 'Today'
+            //     }
+            // },
             defineField({
                 name: 'tags',
                 title: 'Tags',
@@ -82,18 +82,18 @@ export const workExperience = defineType(
         ],
         preview: {
             select: {
-              title: 'company',
-              startDate: 'startDate',
-              endDate: 'endDate',
-              type: 'type'
+                title: 'company',
+                startDate: 'startDate',
+                endDate: 'endDate',
+                type: 'type'
             },
             prepare(selection) {
-                const {title, startDate, endDate, type} = selection
+                const { title, startDate, endDate, type } = selection
                 return {
-                  title: title,
-                  subtitle: `${startDate} - ${endDate} | ${type}`
+                    title: title,
+                    subtitle: `${startDate} - ${endDate} | ${type}`
                 }
-              }
-          }
+            }
+        }
     }
 )

@@ -3,6 +3,7 @@ import category from './category'
 import post from './post'
 import author from './author'
 import page from './page'
+import {job} from './job.document'
 import hero from './objects/hero.section'
 import textWithImage from './objects/textWithImage.section'
 import simpleCopy from './objects/simpleCopy.section'
@@ -32,5 +33,6 @@ export const schemaTypes =
     author,
     category,
     blockContent,
-    cv
+    cv,
+    job
   ]

@@ -83,7 +83,7 @@ export const cv = defineType({
             name: 'workExperience',
             title: 'Work Experience',
             type: 'array',
-            of: [{ type: 'workExperience' }]
+            of: [{ type: 'reference', to: [{ type: 'job' }] }]
         },
         {
             name: 'trainerExperience',

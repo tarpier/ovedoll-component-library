@@ -4,7 +4,6 @@ module.exports = async (phase, { defaultConfig }) => {
    */
   const nextConfig = {
     /* config options here */
-
   }
   return nextConfig
 }

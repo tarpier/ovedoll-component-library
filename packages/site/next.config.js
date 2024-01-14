@@ -4,7 +4,7 @@ module.exports = async (phase, { defaultConfig }) => {
    */
   const nextConfig = {
     /* config options here */
-    experimental: { appDir: true }
+
   }
   return nextConfig
 }

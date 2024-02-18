@@ -23,11 +23,27 @@ export const cv = defineType({
                     title: 'Personal Information',
                 },
                 {
+                    name: 'coverLetter',
+                    title: 'Cover Letter',
+                },
+                {
                     name: 'social',
                     title: 'social network',
                 },
             ],
             fields: [
+                defineField({
+                    name: 'jobTitle',
+                    title: 'Job Title',
+                    type: 'string',
+                    group: 'coverLetter',
+                }),
+                defineField({
+                    name: 'coverLetter',
+                    title: 'Cover Letter',
+                    type: 'blockContent',
+                    group: 'coverLetter',
+                }),
                 defineField({
                     name: 'name',
                     title: 'Name',
@@ -45,6 +61,12 @@ export const cv = defineType({
                     name: 'phone',
                     title: 'Phone',
                     type: 'string',
+                    group: 'personal',
+                }),
+                defineField({
+                    name: 'showAddress',
+                    title: 'Show Address on CV?',
+                    type: 'boolean',
                     group: 'personal',
                 }),
                 defineField({
